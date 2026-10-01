@@ -1,0 +1,3027 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>🌊 Sunami RP</title>
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:tahoma,sans-serif;
+}
+
+
+body{
+
+background:
+radial-gradient(circle at top,#2b4f86,#090d14 60%),
+linear-gradient(#090d14,#111827);
+
+background-attachment:fixed;
+
+color:#fff;
+
+overflow-x:hidden;
+
+}
+
+
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+
+::-webkit-scrollbar-thumb{
+
+background:#00d9ff;
+
+border-radius:20px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+
+
+a{
+
+text-decoration:none;
+
+color:white;
+
+}
+
+
+
+/* هدر */
+
+
+header{
+
+position:fixed;
+
+top:15px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:95%;
+
+max-width:1200px;
+
+padding:11px 22px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(15,22,35,.75);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(0,217,255,.25);
+
+border-radius:18px;
+
+box-shadow:0 0 30px rgba(0,217,255,.12);
+
+z-index:999;
+
+}
+
+
+
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#33e7ff;
+
+text-shadow:
+0 0 10px #00d9ff,
+0 0 20px #00d9ff,
+0 0 40px #00d9ff;
+
+animation:glow 2s infinite alternate;
+
+}
+
+
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px #00d9ff;
+
+}
+
+to{
+
+text-shadow:
+0 0 20px #00ffff,
+0 0 40px #00d9ff,
+0 0 60px #00d9ff;
+
+}
+
+}
+
+
+
+nav{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+
+nav a{
+
+color:#d8e7ff;
+
+transition:.3s;
+
+font-size:14px;
+
+}
+
+
+nav a:hover{
+
+color:#00e5ff;
+
+text-shadow:0 0 10px #00d9ff;
+
+}
+
+
+
+/* هیرو */
+
+
+.hero{
+
+padding-top:170px;
+
+padding-bottom:70px;
+
+text-align:center;
+
+}
+
+
+
+.badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:50px;
+
+background:rgba(0,217,255,.1);
+
+border:1px solid rgba(0,217,255,.35);
+
+color:#75f2ff;
+
+box-shadow:0 0 20px rgba(0,217,255,.15);
+
+margin-bottom:18px;
+
+font-size:15px;
+
+}
+
+
+
+.hero h1{
+
+font-size:42px;
+
+margin-bottom:16px;
+
+text-shadow:
+0 0 20px #00d9ff,
+0 0 50px #00d9ff;
+
+}
+
+
+
+.hero p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:16.5px;
+
+line-height:1.9;
+
+color:#c7d2df;
+
+}
+
+
+
+.buttons{
+
+margin-top:28px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+gap:14px;
+
+max-width:340px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+
+
+.btn{
+
+padding:14px 26px;
+
+border-radius:13px;
+
+font-weight:bold;
+
+font-size:16.5px;
+
+transition:.35s;
+
+width:100%;
+
+text-align:center;
+
+display:inline-block;
+
+}
+
+
+
+.btn-blue{
+
+background:#00d9ff;
+
+color:#08111b;
+
+box-shadow:
+0 0 20px #00d9ff,
+0 0 45px rgba(0,217,255,.5);
+
+}
+
+
+
+.btn-blue:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 0 30px #00ffff,
+0 0 70px #00d9ff;
+
+}
+
+
+
+.btn-dark{
+
+background:#1a2333;
+
+border:1px solid #324154;
+
+}
+
+
+
+.btn-dark:hover{
+
+background:#2b394d;
+
+}
+
+
+
+/* باکس آیپی سرور (قابل کپی) */
+
+
+.server-ip-box{
+
+max-width:250px;
+
+margin:18px auto 0;
+
+display:flex;
+
+flex-direction:row-reverse;
+
+align-items:center;
+
+justify-content:center;
+
+gap:8px;
+
+padding:7px 12px;
+
+border-radius:12px;
+
+background:linear-gradient(135deg,rgba(0,217,255,.10),rgba(0,20,20,.35));
+
+border:1px solid rgba(0,217,255,.35);
+
+box-shadow:0 0 20px rgba(0,217,255,.12);
+
+}
+
+
+
+.server-ip-box .ip-text{
+
+font-size:12px;
+
+color:#fff;
+
+direction:rtl;
+
+}
+
+
+
+.server-ip-box .ip-label{
+
+color:#00d9ff;
+
+font-weight:bold;
+
+margin-left:5px;
+
+}
+
+
+
+.server-ip-box #serverIP{
+
+font-family:tahoma,sans-serif;
+
+direction:ltr;
+
+unicode-bidi:embed;
+
+color:#fff;
+
+}
+
+
+
+.copy-ip-btn{
+
+flex-shrink:0;
+
+width:30px;
+
+height:30px;
+
+border-radius:50%;
+
+border:none;
+
+background:rgba(255,255,255,.08);
+
+color:#e0f9ff;
+
+font-size:13px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.copy-ip-btn:hover{
+
+background:rgba(0,217,255,.25);
+
+}
+
+
+
+.copy-ip-btn.copied{
+
+background:#00d9ff;
+
+color:#08111b;
+
+}
+
+
+
+/* اسکرول کنید */
+
+
+.scroll-down{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:8px;
+
+margin:34px auto 0;
+
+width:fit-content;
+
+cursor:pointer;
+
+}
+
+
+
+.scroll-down span{
+
+font-size:12.5px;
+
+color:#dff6ff;
+
+}
+
+
+
+.scroll-mouse{
+
+width:26px;
+
+height:42px;
+
+border:2px solid #00d9ff;
+
+border-radius:14px;
+
+display:flex;
+
+justify-content:center;
+
+padding-top:6px;
+
+box-shadow:0 0 14px rgba(0,217,255,.4);
+
+}
+
+
+
+.scroll-wheel{
+
+width:4px;
+
+height:8px;
+
+border-radius:2px;
+
+background:#00d9ff;
+
+box-shadow:0 0 8px #00d9ff;
+
+animation:scrollWheel 1.6s infinite;
+
+}
+
+
+
+@keyframes scrollWheel{
+
+0%{ transform:translateY(0); opacity:1; }
+
+70%{ transform:translateY(12px); opacity:0; }
+
+100%{ transform:translateY(0); opacity:0; }
+
+}
+
+
+
+/* بخش ها */
+
+
+.container{
+
+width:92%;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+section{
+
+padding:46px 0;
+
+position:relative;
+
+}
+
+
+section::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:160px;
+
+height:2px;
+
+background:#00d9ff;
+
+box-shadow:0 0 20px #00d9ff;
+
+}
+
+
+
+.title{
+
+font-size:25px;
+
+text-align:center;
+
+margin-bottom:11px;
+
+}
+
+
+
+.desc{
+
+text-align:center;
+
+max-width:850px;
+
+margin:auto;
+
+font-size:14.5px;
+
+line-height:1.75;
+
+color:#b7c5d8;
+
+margin-bottom:23px;
+
+}
+
+
+
+/* کارت پایه */
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:13px;
+
+}
+
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(0,217,255,.18);
+
+border-radius:15px;
+
+padding:16px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+transition:.4s;
+
+box-shadow:0 0 15px rgba(0,217,255,.08);
+
+} 
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#00d9ff;
+
+} 
+
+
+
+.icon{
+
+width:50px;
+
+height:50px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+margin:0 auto 10px;
+
+color:#00d9ff;
+
+} 
+
+
+.icon svg{
+
+width:24px;
+
+height:24px;
+
+}
+
+
+
+.inline-ic{
+
+width:20px;
+
+height:20px;
+
+vertical-align:-5px;
+
+display:inline-block;
+
+margin:0 3px;
+
+}
+
+
+.card h3{
+
+color:#39e4ff;
+
+font-size:16px;
+
+margin-bottom:7px;
+
+}
+
+
+.card p{
+
+font-size:13.5px;
+
+line-height:1.7;
+
+color:#c2cfdd;
+
+}
+
+/* =========================
+   کارت های درباره سرور
+========================= */
+
+
+#about .card{
+
+position:relative;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.10),
+rgba(0,217,255,.04)
+);
+
+border-radius:19px;
+
+padding:19px 16px;
+
+overflow:hidden;
+
+}
+
+
+#about .card::after{
+
+content:"";
+
+position:absolute;
+
+right:-40px;
+
+bottom:-40px;
+
+width:130px;
+
+height:130px;
+
+background:#00d9ff;
+
+filter:blur(70px);
+
+opacity:.25;
+
+}
+
+
+
+#about .card:hover{
+
+transform:translateY(-15px);
+
+}
+
+
+
+/* =========================
+   کارت های ویژگی ها (استایل جدید طبق عکس)
+========================= */
+
+
+#features .grid{
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+align-items:stretch;
+
+}
+
+
+
+#features .card{
+
+height:100%;
+
+background:#131b2e;
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:17px;
+
+padding:0 0 20px;
+
+position:relative;
+
+overflow:hidden;
+
+align-items:center;
+
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+
+/* نوار رنگی بالای کارت */
+
+#features .card::before{
+
+content:"";
+
+display:block;
+
+width:100%;
+
+height:5px;
+
+}
+
+
+
+#features .card .icon{
+
+width:56px;
+
+height:56px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+font-size:28px;
+
+margin:18px auto 13px;
+
+}
+
+
+
+#features .card .icon svg{
+
+width:25px;
+
+height:25px;
+
+}
+
+
+
+#features .card h3{
+
+font-size:15.5px;
+
+color:#ffffff;
+
+margin-bottom:6px;
+
+padding:0 14px;
+
+}
+
+
+
+#features .card p{
+
+color:#9fb0c3;
+
+font-size:12.5px;
+
+padding:0 16px;
+
+}
+
+
+
+#features .card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+/* رنگ سبز */
+
+#features .card.c-green::before{
+
+background:#8b5cf6;
+
+box-shadow:0 0 25px #8b5cf6;
+
+}
+
+#features .card.c-green .icon{
+
+color:#8b5cf6;
+
+box-shadow:0 0 25px rgba(46,230,166,.25) inset;
+
+}
+
+
+
+/* رنگ قرمز */
+
+#features .card.c-red::before{
+
+background:#00e5ff;
+
+box-shadow:0 0 25px #00e5ff;
+
+}
+
+#features .card.c-red .icon{
+
+color:#00e5ff;
+
+box-shadow:0 0 25px rgba(255,59,92,.25) inset;
+
+}
+
+
+
+/* رنگ آبی */
+
+#features .card.c-blue::before{
+
+background:#00d9ff;
+
+box-shadow:0 0 25px #00d9ff;
+
+}
+
+#features .card.c-blue .icon{
+
+color:#00d9ff;
+
+box-shadow:0 0 25px rgba(0,217,255,.25) inset;
+
+}
+
+
+
+/* رنگ طلایی */
+
+#features .card.c-gold::before{
+
+background:#00f5c4;
+
+box-shadow:0 0 25px #00f5c4;
+
+}
+
+#features .card.c-gold .icon{
+
+color:#00f5c4;
+
+box-shadow:0 0 25px rgba(255,207,77,.25) inset;
+
+}
+
+
+
+/* =========================
+   کارت های آمار (استایل جدید طبق عکس)
+========================= */
+
+
+#stats .grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+#stats .grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+#stats .card{
+
+height:104px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+background:#151c30;
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:15px;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+#stats .card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:5px;
+
+}
+
+
+
+#stats .card h2{
+
+margin-top:5px;
+
+font-size:25px !important;
+
+}
+
+
+
+#stats .card p{
+
+color:#b8c4d6;
+
+margin-top:3px;
+
+font-size:12px;
+
+}
+
+
+
+#stats .card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+#stats .card.c-red::before{
+
+background:#00e5ff;
+
+box-shadow:0 0 25px #00e5ff;
+
+}
+
+#stats .card.c-red h2{
+
+color:#00e5ff !important;
+
+text-shadow:0 0 20px #00e5ff !important;
+
+}
+
+
+
+#stats .card.c-green::before{
+
+background:#8b5cf6;
+
+box-shadow:0 0 25px #8b5cf6;
+
+}
+
+#stats .card.c-green h2{
+
+color:#8b5cf6 !important;
+
+text-shadow:0 0 20px #8b5cf6 !important;
+
+}
+
+
+
+#stats .card.c-orange::before{
+
+background:#5b6eff;
+
+box-shadow:0 0 25px #5b6eff;
+
+}
+
+#stats .card.c-orange h2{
+
+color:#5b6eff !important;
+
+text-shadow:0 0 20px #5b6eff !important;
+
+}
+
+
+
+/* =========================
+   کارت های تیم مدیریت (بنیان‌گذاران سرور - طبق عکس)
+========================= */
+
+
+#leaders .title{
+
+/* رنگ‌آمیزی با اسپن داخل متن انجام می‌شود */
+
+}
+
+
+
+#leaders .card{
+
+position:relative;
+
+background:#151c30;
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:15px;
+
+padding:15px 18px 15px;
+
+text-align:right;
+
+display:flex;
+
+flex-direction:row;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:12px;
+
+overflow:hidden;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+
+#leaders .card .info{
+
+order:1;
+
+flex:1;
+
+}
+
+
+
+#leaders .card .icon{
+
+order:2;
+
+}
+
+
+
+#leaders .card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+right:0;
+
+width:100%;
+
+height:5px;
+
+}
+
+
+
+#leaders .card .info h3{
+
+font-size:15.5px;
+
+margin-bottom:5px;
+
+}
+
+
+
+#leaders .card .info p{
+
+color:#9fb0c3;
+
+font-size:12.5px;
+
+}
+
+
+
+#leaders .icon{
+
+flex-shrink:0;
+
+width:46px;
+
+height:46px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.1);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+filter:none;
+
+}
+
+
+
+#leaders .icon svg{
+
+width:20px;
+
+height:24px;
+
+}
+
+
+
+#leaders .card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+#leaders .card.c-gold::before{
+
+background:#00f5c4;
+
+box-shadow:0 0 20px #00f5c4;
+
+}
+
+#leaders .card.c-gold .info h3{color:#00f5c4;}
+
+#leaders .card.c-gold .icon{color:#00f5c4;}
+
+
+
+#leaders .card.c-green::before{
+
+background:#8b5cf6;
+
+box-shadow:0 0 20px #8b5cf6;
+
+}
+
+#leaders .card.c-green .info h3{color:#8b5cf6;}
+
+#leaders .card.c-green .icon{color:#8b5cf6;}
+
+
+
+#leaders .card.c-blue::before{
+
+background:#c964ff;
+
+box-shadow:0 0 20px #c964ff;
+
+}
+
+#leaders .card.c-blue .info h3{color:#c964ff;}
+
+#leaders .card.c-blue .icon{color:#c964ff;}
+
+
+
+#leaders .card.c-red::before{
+
+background:#00e5ff;
+
+box-shadow:0 0 20px #00e5ff;
+
+}
+
+#leaders .card.c-red .info h3{color:#00e5ff;}
+
+#leaders .card.c-red .icon{color:#00e5ff;}
+
+
+
+#leaders .grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+/* =========================
+   گالری (اسلایدر با پیش‌نمایش، نقطه‌ها و پخش خودکار)
+========================= */
+
+
+#gallery .gallery-carousel{
+
+position:relative;
+
+}
+
+
+
+#gallery .gallery-track{
+
+display:flex;
+
+gap:14px;
+
+overflow-x:auto;
+
+scroll-behavior:auto;
+
+padding:40px 4% 40px;
+
+-webkit-overflow-scrolling:touch;
+
+scrollbar-width:none;
+
+direction:ltr;
+
+}
+
+
+
+#gallery .gallery-track::-webkit-scrollbar{
+
+display:none;
+
+}
+
+
+
+#gallery .gallery-track img{
+
+flex:0 0 100%;
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:1px solid rgba(0,217,255,.35);
+
+box-shadow:0 10px 28px rgba(0,0,0,.5);
+
+cursor:zoom-in;
+
+transition:box-shadow .3s, transform .3s;
+
+}
+
+
+
+#gallery .gallery-track img:hover{
+
+box-shadow:0 0 0 2px rgba(0,217,255,.6),0 14px 32px rgba(0,0,0,.55);
+
+}
+
+
+
+.gallery-dots-viewport{
+
+width:110px;
+
+height:26px;
+
+margin:6px auto 0;
+
+overflow:hidden;
+
+position:relative;
+
+direction:ltr;
+
+}
+
+
+
+.gallery-dots-track{
+
+display:flex;
+
+position:absolute;
+
+top:50%;
+
+left:0;
+
+transform:translateY(-50%);
+
+transition:transform .45s ease;
+
+direction:ltr;
+
+}
+
+
+
+.gallery-dots-track .dot-slot{
+
+flex:0 0 22px;
+
+height:22px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+cursor:pointer;
+
+}
+
+
+
+.gallery-dots-track .dot-visual{
+
+width:5px;
+
+height:5px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.22);
+
+transition:width .35s,height .35s,background .35s,box-shadow .35s;
+
+}
+
+
+
+.gallery-dots-track .dot-slot.near .dot-visual{
+
+width:9px;
+
+height:9px;
+
+background:rgba(255,255,255,.5);
+
+}
+
+
+
+.gallery-dots-track .dot-slot.active .dot-visual{
+
+width:14px;
+
+height:14px;
+
+background:#00d9ff;
+
+box-shadow:0 0 12px #00d9ff;
+
+}
+
+
+
+.gallery-hint{
+
+text-align:center;
+
+color:#8fa3bb;
+
+font-size:12px;
+
+margin-top:8px;
+
+}
+
+
+
+/* لایت‌باکس */
+
+
+#lightbox{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(5,8,15,.92);
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+z-index:99999;
+
+padding:20px;
+
+backdrop-filter:blur(6px);
+
+}
+
+
+
+#lightbox img{
+
+max-width:95%;
+
+max-height:90%;
+
+border-radius:16px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+
+}
+
+
+
+#lightbox.active{
+
+display:flex;
+
+}
+
+
+
+/* =========================
+   فوتر
+========================= */
+
+
+footer a{
+
+transition:.35s;
+
+}
+
+
+
+footer a:hover{
+
+transform:
+
+translateY(-8px)
+
+scale(1.05);
+
+}
+
+
+
+/* موبایل */
+
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+.hero{
+
+padding-top:165px;
+
+}
+
+
+.logo{
+
+font-size:20px;
+
+}
+
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+
+.hero p{
+
+font-size:15.5px;
+
+}
+
+
+.title{
+
+font-size:22px;
+
+}
+
+
+nav{
+
+justify-content:center;
+
+}
+
+
+#stats .card{
+
+height:94px;
+
+}
+
+
+#stats .card h2{
+
+font-size:22px !important;
+
+}
+
+
+#stats .card p{
+
+font-size:11px;
+
+}
+
+
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+🌊 SUNAMI RP
+</div>
+
+
+<nav>
+
+<a href="#about">
+درباره
+</a>
+
+<a href="#features">
+ویژگی‌ها
+</a>
+
+<a href="#stats">
+آمار
+</a>
+
+<a href="#leaders">
+تیم مدیریت
+</a>
+
+<a href="#gallery">
+گالری
+</a>
+
+<a href="#social">
+شبکه های اجتماعی 🌊 رول پلی
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="badge">
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg> بهترین سرور GTA SA Multiplayer
+</div>
+
+<h1>SUNAMI ROLEPLAY</h1>
+
+<p>
+
+به دنیای حرفه‌ای رول پلی فارسی خوش آمدید.
+سیستم‌های اختصاصی، اقتصاد واقعی، ایونت‌های روزانه، گرافیک حرفه‌ای و تیم مدیریتی فعال، همه در کنار هم تا بهترین تجربه ممکن را برای شما فراهم کنند.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-blue" href="https://t.me/sunami_Role_Play">
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> ورود به تلگرام
+</a>
+
+<a class="btn btn-blue" href="#about">
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> درباره سرور
+</a>
+
+</div>
+
+<div class="server-ip-box">
+
+<button class="copy-ip-btn" id="copyIpBtn" onclick="copyServerIP()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg></button>
+
+<span class="ip-text"><span class="ip-label">آیپی سرور:</span> <span id="serverIP">play.sunami-rp.ir</span></span>
+
+</div>
+
+<a href="#about" class="scroll-down">
+
+<div class="scroll-mouse">
+
+<div class="scroll-wheel"></div>
+
+</div>
+
+<span>اسکرول کنید</span>
+
+</a>
+
+</div>
+
+</section> 
+<!-- درباره سرور -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="title">🌊 چرا سونامی رول پلی؟</h2>
+
+<p class="desc">
+
+سونامی رول پلی با هدف ساخت بهترین تجربه رول پلی فارسی در GTA San Andreas Multiplayer ایجاد شده است.
+ما با سیستم‌های اختصاصی، مدیریت حرفه‌ای، ایونت‌های منظم، اقتصاد واقعی، شغل‌های متنوع و بروزرسانی‌های مداوم، محیطی متفاوت برای بازیکنان فراهم کرده‌ایم.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"></path></svg></div>
+
+<h3>سرعت بالا</h3>
+
+<p>
+سرور با پینگ مناسب، لگ بسیار کم و اجرای روان برای کاربران موبایل و کامپیوتر.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+
+<h3>امنیت</h3>
+
+<p>
+سیستم‌های ضد چیت و مدیریت فعال برای ایجاد محیطی سالم و عادلانه.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><circle cx="15" cy="10.5" r="1"></circle><circle cx="18" cy="13.5" r="1"></circle></svg></div>
+
+<h3>تجربه واقعی RP</h3>
+
+<p>
+قوانین کامل رول پلی، سناریوهای جذاب و امکانات اختصاصی برای یک تجربه حرفه‌ای.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ویژگی ها -->
+
+<section id="features">
+
+<div class="container">
+
+<h2 class="title"><svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> ویژگی‌های سرور</h2>
+
+<p class="desc">
+
+امکانات اختصاصی که سونامی رول پلی را از سایر سرورها متمایز می‌کند.
+
+</p>
+
+<div class="grid">
+
+<div class="card c-green">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+
+<h3>بزرگ‌ترین سرور سمپ ایران</h3>
+
+<p>
+بیش از 1000 بازیکن فعال؛ به جامعه بزرگ ما بپیوند!
+</p>
+
+</div>
+
+<div class="card c-red">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10"></path><path d="M15 9.5c0-1.5-1.5-2.5-3-2.5s-3 1-3 2.5 1.5 2 3 2.5 3 1 3 2.5-1.5 2.5-3 2.5-3-1-3-2.5"></path></svg></div>
+
+<h3>سیستم اقتصادی واقع‌گرایانه</h3>
+
+<p>
+خرید خانه، ماشین، بیزنس، کسب درآمد و تجارت آزاد.
+</p>
+
+</div>
+
+<div class="card c-green">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4"></rect><path d="M12 8v13"></path><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"></path><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"></path></svg></div>
+
+<h3>جوایز ویژه</h3>
+
+<p>
+هدیه روزانه، پاداش ورود، سیستم مأموریت و جوایز مناسبتی.
+</p>
+
+</div>
+
+<div class="card c-red">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+
+<h3>آپدیت مداوم</h3>
+
+<p>
+امکانات جدید و بروزرسانی‌های منظم برای تجربه بهتر.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- آمار سرور -->
+
+<section id="stats">
+
+<div class="container">
+
+<h2 class="title"><svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> آمار سرور</h2>
+
+<p class="desc">
+
+هر روز خانواده سونامی رول پلی بزرگ‌تر می‌شود.
+
+</p>
+
+<div class="grid">
+
+<div class="card c-red" style="text-align:center;">
+
+<h2 style="font-size:45px;">
++150
+</h2>
+
+<p>ایونت برگزار شده</p>
+
+</div>
+
+<div class="card c-green" style="text-align:center;">
+
+<h2 style="font-size:45px;">
++5,000
+</h2>
+
+<p>بازیکن فعال</p>
+
+</div>
+
+<div class="card c-red" style="text-align:center;">
+
+<h2 style="font-size:45px;">
++5
+</h2>
+
+<p>سال فعالیت</p>
+
+</div>
+
+<div class="card c-green" style="text-align:center;">
+
+<h2 style="font-size:45px;">
++1,600
+</h2>
+
+<p>خانه‌های ساخته شده</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- گالری -->
+
+<section id="gallery">
+
+<div class="container">
+
+<h2 class="title"><svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> گالری سرور</h2>
+
+<p class="desc">
+
+تصاویری از محیط و رویدادهای Sonami Roleplay
+
+</p>
+
+<div class="gallery-carousel">
+
+<div class="gallery-track" id="galleryTrack">
+
+<img src="https://cdn.imgurl.ir/uploads/v737478_IMG_20260629_191445_092.jpg">
+
+<img src="https://cdn.imgurl.ir/uploads/r790808_IMG_20260629_191345_133.jpg">
+
+<img src="https://cdn.imgurl.ir/uploads/v099907_IMG_20260629_222146_710.jpg">
+
+<img src="https://cdn.imgurl.ir/uploads/c181070_IMG_20260629_222908_632.jpg">
+
+</div>
+
+</div>
+
+<div class="gallery-dots-viewport" id="galleryDotsViewport">
+
+<div class="gallery-dots-track" id="galleryDotsTrack"></div>
+
+</div>
+
+<p class="gallery-hint">برای مشاهده تصویر در اندازه بزرگ، روی آن کلیک کنید</p>
+
+</div>
+
+</section>
+
+<!-- مدیریت -->
+
+<section id="leaders">
+
+<div class="container">
+
+<h2 class="title" style="color:#00d9ff;">بنیان‌گذاران سرور</h2>
+
+<p class="desc">
+
+بنیان‌گذاران ایران رول‌پلی که هر کدام در بخش خاصی مسئولیت رهبری دارند.
+
+</p>
+
+<div class="grid">
+
+<div class="card c-gold">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+
+<div class="info">
+<h3>Vip_Amir</h3>
+<p>مدیر ارشد عملیات و قوانین</p>
+</div>
+
+</div>
+
+<div class="card c-green">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+
+<div class="info">
+<h3>Amir / AmirSh</h3>
+<p>مدیر ارشد فناوری و توسعه</p>
+</div>
+
+</div>
+
+<div class="card c-blue">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-7 7c0 3 2 4.5 3 6h8c1-1.5 3-3 3-6a7 7 0 0 0-7-7z"></path></svg></div>
+
+<div class="info">
+<h3>Komando_Freeway</h3>
+<p>مدیر ارشد نوآوری و نرم‌افزار</p>
+</div>
+
+</div>
+
+<div class="card c-red">
+
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+
+<div class="info">
+<h3>Mahdi</h3>
+<p>معاون ارشد عملیات و مدیریت ادمین‌ها</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ====================== SOCIAL STYLE ====================== -->
+
+<style>
+
+.social-section{
+
+padding:44px 0;
+
+text-align:center;
+
+border-top:1px solid rgba(0,217,255,.18);
+
+border-bottom:1px solid rgba(0,217,255,.18);
+
+}
+
+
+
+.social-title{
+
+font-size:24px;
+
+margin-bottom:8px;
+
+color:#fff;
+
+text-shadow:
+0 0 15px #00d9ff,
+0 0 35px rgba(0,217,255,.35);
+
+}
+
+
+
+.social-desc{
+
+max-width:820px;
+
+margin:0 auto 13px;
+
+font-size:13.5px;
+
+line-height:1.7;
+
+color:#c9d8e6;
+
+}
+
+
+
+.server-info{
+
+max-width:760px;
+
+margin:15px auto;
+
+padding:12px;
+
+border-radius:13px;
+
+font-size:12.5px;
+
+background:rgba(0,217,255,.08);
+
+border:1px solid rgba(0,217,255,.25);
+
+box-shadow:
+
+0 0 20px rgba(0,217,255,.08);
+
+}
+
+
+
+/* دکمه ها */
+
+.socials{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:10px;
+
+max-width:760px;
+
+margin:18px auto;
+
+}
+
+
+
+.social-card{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:46px;
+
+border-radius:13px;
+
+font-size:13px;
+
+font-weight:bold;
+
+color:white;
+
+transition:.35s;
+
+}
+
+
+
+.social-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+
+/* رنگ شبکه ها */
+
+
+.telegram{
+
+background:linear-gradient(135deg,#2AABEE,#0088CC);
+
+box-shadow:0 0 20px rgba(42,171,238,.35);
+
+}
+
+
+
+.rubika{
+
+background:linear-gradient(135deg,#32d06c,#18b65b);
+
+box-shadow:0 0 20px rgba(50,208,108,.35);
+
+}
+
+
+
+.aparat{
+
+background:linear-gradient(135deg,#ff3d52,#d6001c);
+
+box-shadow:0 0 20px rgba(255,61,82,.35);
+
+}
+
+
+
+.support{
+
+background:linear-gradient(135deg,#00b7ff,#0077ff);
+
+box-shadow:0 0 20px rgba(0,183,255,.35);
+
+}
+
+
+
+.footer-copy{
+
+margin-top:16px;
+
+font-size:11px;
+
+line-height:1.7;
+
+color:#9ccfe5;
+
+}
+
+
+
+@media(max-width:768px){
+
+.socials{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:10px;
+
+}
+
+
+.social-card{
+
+height:44px;
+
+font-size:12.5px;
+
+}
+
+
+.social-title{
+
+font-size:21px;
+
+}
+
+}
+
+</style>
+
+
+
+<!-- ====================== SOCIAL ====================== -->
+
+
+<section id="social" class="social-section">
+
+
+<div class="container">
+
+
+<h2 class="social-title">
+
+🌊 شبکه‌های اجتماعی
+
+</h2>
+
+
+
+<p class="social-desc">
+
+آخرین اخبار، اطلاعیه‌ها و آموزش‌های Sunami Role Play را از طریق شبکه‌های اجتماعی دنبال کنید.
+
+</p>
+
+
+
+
+<div class="server-info">
+
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"></path></svg> سرور 24/7 فعال |
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><circle cx="15" cy="10.5" r="1"></circle><circle cx="18" cy="13.5" r="1"></circle></svg> رول پلی حرفه‌ای |
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-4.6 7.5 8.5 8.5 0 0 1-8.5-.4L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> پشتیبانی سریع
+
+</div>
+
+
+
+
+<div class="socials">
+
+
+<a class="social-card telegram"
+
+href="https://t.me/Sunami_Role_Play"
+
+target="_blank">
+
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> تلگرام
+
+</a>
+
+
+
+
+<a class="social-card rubika"
+
+href="https://rubika.ir/Sunami_Role_Play"
+
+target="_blank">
+
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg> روبیکا
+
+</a>
+
+
+
+
+<a class="social-card aparat"
+
+href="https://www.aparat.com/Sunami_Role_Play"
+
+target="_blank">
+
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg> آپارات
+
+</a>
+
+
+
+
+<a class="social-card support"
+
+href="https://t.me/Masih_Famous"
+
+target="_blank">
+
+<svg class="inline-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> پشتیبانی 24/7
+
+</a>
+
+
+
+</div>
+
+
+
+
+<div class="footer-copy">
+
+© 2026 SUNAMI ROLE PLAY SHOP
+
+<br>
+
+All Rights Reserved
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+/* فیلتر محصولات اگر وجود داشته باشد */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+const productCards = document.querySelectorAll(".product-card");
+
+
+
+if(filterButtons.length && productCards.length){
+
+
+filterButtons.forEach(button=>{
+
+
+button.addEventListener("click",()=>{
+
+
+filterButtons.forEach(btn=>{
+
+btn.classList.remove("active");
+
+});
+
+
+button.classList.add("active");
+
+
+
+const filter = button.dataset.filter;
+
+
+
+productCards.forEach(card=>{
+
+
+if(filter==="all" || card.classList.contains(filter)){
+
+
+card.style.display="";
+
+
+}else{
+
+
+card.style.display="none";
+
+
+}
+
+
+});
+
+
+});
+
+
+});
+
+
+}
+
+
+
+
+
+/* بزرگنمایی تصویر محصول */
+
+
+document.querySelectorAll(".product-image img")
+
+.forEach(img=>{
+
+
+img.addEventListener("click",()=>{
+
+
+img.style.transform="scale(1.15)";
+
+
+
+setTimeout(()=>{
+
+
+img.style.transform="scale(1)";
+
+
+},250);
+
+
+
+});
+
+
+});
+
+
+</script>
+
+
+<!-- ================= لایت‌باکس گالری ================= -->
+
+<div id="lightbox">
+<img id="lightbox-img" src="">
+</div>
+
+
+<script>
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll("#gallery .gallery-track img").forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightboxImg.src = img.src;
+
+lightbox.classList.add("active");
+
+/* هنگام باز بودن لایت‌باکس، پخش خودکار گالری متوقف شود */
+stopGalleryAutoplay();
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+lightbox.classList.remove("active");
+
+lightboxImg.src = "";
+
+/* پس از بستن لایت‌باکس، پخش خودکار از سر گرفته شود */
+startGalleryAutoplay();
+
+});
+
+
+
+/* نقطه‌های گالری (نمایش کشویی با نقطه‌ی وسط بزرگ) + چرخش خودکار بی‌پایان هر 3 ثانیه */
+
+
+const galleryTrack = document.getElementById("galleryTrack");
+
+const gallerySlides = Array.from(galleryTrack.children);
+
+const totalRealSlides = gallerySlides.length;
+
+/* یک کپی از اولین عکس در انتهای نوار اضافه می‌شود تا بعد از آخرین عکس، چرخش به‌جای برگشت به عقب، به همون سمت جلو ادامه پیدا کنه */
+
+const galleryFirstClone = gallerySlides[0].cloneNode(true);
+
+galleryTrack.appendChild(galleryFirstClone);
+
+const galleryTrackSlides = Array.from(galleryTrack.children);
+
+
+
+const galleryDotsViewport = document.getElementById("galleryDotsViewport");
+
+const galleryDotsTrack = document.getElementById("galleryDotsTrack");
+
+/* سه نسخه پشت‌سرهم از نقاط ساخته می‌شود (چون همه شبیه هم هستند) تا نوار نقطه‌ها بتونه همیشه، برای همیشه، فقط رو به جلو بلغزه؛ نسخه‌ی وسط، نسخه‌ی اصلیه */
+
+const DOT_COPIES = 3;
+
+const DOT_SLOT_WIDTH = 22;
+
+const dotsMiddleOffset = totalRealSlides; // شروع از نسخه‌ی وسط
+
+for(let copy=0; copy<DOT_COPIES; copy++){
+
+for(let i=0; i<totalRealSlides; i++){
+
+const slot = document.createElement("span");
+
+slot.className = "dot-slot";
+
+const visual = document.createElement("span");
+
+visual.className = "dot-visual";
+
+slot.appendChild(visual);
+
+const realIndex = i;
+
+slot.addEventListener("click",()=>{
+
+currentGalleryIndex = realIndex;
+
+dotPointer = dotsMiddleOffset + realIndex;
+
+goToGallerySlide(realIndex);
+
+setDotsPosition(dotPointer, false);
+
+restartGalleryAutoplay();
+
+});
+
+galleryDotsTrack.appendChild(slot);
+
+}
+
+}
+
+
+
+const galleryDots = Array.from(galleryDotsTrack.children);
+
+let dotPointer = dotsMiddleOffset;
+
+
+
+function setDotsPosition(index, instant){
+
+galleryDots.forEach((d,i)=>{
+
+const dist = Math.abs(i-index);
+
+d.classList.remove("active","near");
+
+if(dist===0) d.classList.add("active");
+
+else if(dist===1) d.classList.add("near");
+
+});
+
+/* چون همه‌ی خانه‌ها اندازه‌ی ثابت 22px دارند (فقط نقطه‌ی داخلشون سایز عوض می‌کنه، نه خودِ خانه)، محاسبه‌ی موقعیت همیشه یک عدد دقیق و بدون خطاست و هیچ‌وقت نصفه‌نیمه نمی‌مونه */
+
+const translateX = DOT_SLOT_WIDTH * (2 - index);
+
+if(instant){
+
+galleryDotsTrack.style.transition = "none";
+
+galleryDotsTrack.style.transform = `translateY(-50%) translateX(${translateX}px)`;
+
+void galleryDotsTrack.offsetWidth;
+
+galleryDotsTrack.style.transition = "";
+
+}else{
+
+galleryDotsTrack.style.transform = `translateY(-50%) translateX(${translateX}px)`;
+
+}
+
+}
+
+
+
+/* موقعیت اولیه نقطه‌ها */
+
+setDotsPosition(dotsMiddleOffset, true);
+
+
+
+function updateActiveDot(){
+
+const trackCenter = galleryTrack.scrollLeft + galleryTrack.clientWidth/2;
+
+let closestIndex = 0;
+
+let closestDist = Infinity;
+
+galleryTrackSlides.forEach((slide, i)=>{
+
+const dist = Math.abs((slide.offsetLeft + slide.clientWidth/2) - trackCenter);
+
+if(dist < closestDist){
+
+closestDist = dist;
+
+closestIndex = i;
+
+}
+
+});
+
+const dotIndex = closestIndex % totalRealSlides;
+
+currentGalleryIndex = dotIndex;
+
+dotPointer = dotsMiddleOffset + dotIndex;
+
+setDotsPosition(dotPointer, false);
+
+}
+
+
+
+function animateGalleryScrollTo(targetLeft, duration, onDone){
+
+const startLeft = galleryTrack.scrollLeft;
+
+const distance = targetLeft - startLeft;
+
+const startTime = performance.now();
+
+function step(now){
+
+const t = Math.min((now - startTime) / duration, 1);
+
+const eased = 1 - Math.pow(1 - t, 3);
+
+galleryTrack.scrollLeft = startLeft + distance * eased;
+
+if(t < 1){
+
+requestAnimationFrame(step);
+
+}else if(onDone){
+
+onDone();
+
+}
+
+}
+
+requestAnimationFrame(step);
+
+}
+
+
+
+function goToGallerySlide(i, onDone){
+
+const slide = galleryTrackSlides[i];
+
+const targetLeft = slide.offsetLeft - (galleryTrack.clientWidth - slide.clientWidth)/2;
+
+animateGalleryScrollTo(targetLeft, 500, onDone);
+
+}
+
+
+
+function jumpGallerySlideInstant(i){
+
+const slide = galleryTrackSlides[i];
+
+const targetLeft = slide.offsetLeft - (galleryTrack.clientWidth - slide.clientWidth)/2;
+
+galleryTrack.scrollLeft = targetLeft;
+
+}
+
+
+
+let currentGalleryIndex = 0;
+
+let galleryAutoplayTimer = null;
+
+
+
+function startGalleryAutoplay(){
+
+if(galleryAutoplayTimer) return;
+
+galleryAutoplayTimer = setInterval(()=>{
+
+currentGalleryIndex++;
+
+dotPointer++;
+
+setDotsPosition(dotPointer, false);
+
+const isWrapping = (currentGalleryIndex === totalRealSlides);
+
+goToGallerySlide(currentGalleryIndex, ()=>{
+
+if(isWrapping){
+
+/* به کپی (که ظاهرش عین اسلاید اول است) رسیدیم؛ درست همون لحظه‌ای که انیمیشن تمام شد (نه زودتر و نه دیرتر)، بی‌صدا به اسلاید و نقطه‌ی واقعی اول می‌پریم تا چرخش هیچ‌وقت به عقب برنگردد و همیشه رو به جلو ادامه پیدا کنه */
+
+jumpGallerySlideInstant(0);
+
+currentGalleryIndex = 0;
+
+dotPointer = dotsMiddleOffset;
+
+setDotsPosition(dotPointer, true);
+
+}
+
+});
+
+}, 3000);
+
+}
+
+
+
+function stopGalleryAutoplay(){
+
+clearInterval(galleryAutoplayTimer);
+
+galleryAutoplayTimer = null;
+
+}
+
+
+
+function restartGalleryAutoplay(){
+
+stopGalleryAutoplay();
+
+startGalleryAutoplay();
+
+}
+
+
+
+let galleryScrollTimer;
+
+galleryTrack.addEventListener("scroll",()=>{
+
+clearTimeout(galleryScrollTimer);
+
+galleryScrollTimer = setTimeout(updateActiveDot, 60);
+
+});
+
+
+
+/* هنگام تعامل دستی کاربر با گالری، تایمر ریست شود تا با هم تداخل نکنند */
+
+galleryTrack.addEventListener("pointerdown", restartGalleryAutoplay);
+
+
+
+/* شروع پخش خودکار گالری */
+
+startGalleryAutoplay();
+
+
+</script>
+
+
+<!-- ================= دکمه بازگشت به بالا ================= -->
+
+<button id="topBtn">
+⬆
+</button>
+
+
+<style>
+
+#topBtn{
+
+position:fixed;
+
+left:20px;
+
+bottom:20px;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:1px solid rgba(0,217,255,.5);
+
+background:rgba(0,217,255,.15);
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+display:none;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 20px rgba(0,217,255,.5);
+
+transition:.35s;
+
+z-index:9999;
+
+}
+
+
+#topBtn:hover{
+
+transform:translateY(-8px);
+
+background:#00d9ff;
+
+color:#08111b;
+
+}
+
+</style>
+
+
+<script>
+
+function copyServerIP(){
+
+const ipText = document.getElementById("serverIP").innerText;
+
+const btn = document.getElementById("copyIpBtn");
+
+const clipboardSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>';
+
+const checkSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+function showCopied(){
+
+btn.innerHTML = checkSVG;
+
+btn.classList.add("copied");
+
+setTimeout(()=>{
+
+btn.innerHTML = clipboardSVG;
+
+btn.classList.remove("copied");
+
+}, 1500);
+
+}
+
+function fallbackCopy(){
+
+const tempInput = document.createElement("textarea");
+
+tempInput.value = ipText;
+
+tempInput.style.position = "fixed";
+
+tempInput.style.opacity = "0";
+
+document.body.appendChild(tempInput);
+
+tempInput.focus();
+
+tempInput.select();
+
+try{
+
+document.execCommand("copy");
+
+}catch(e){}
+
+document.body.removeChild(tempInput);
+
+showCopied();
+
+}
+
+if(navigator.clipboard && window.isSecureContext){
+
+navigator.clipboard.writeText(ipText).then(showCopied).catch(fallbackCopy);
+
+}else{
+
+fallbackCopy();
+
+}
+
+}
+
+</script>
+
+
+<script>
+
+const topBtn=document.getElementById("topBtn");
+
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
+
+
+</body>
+</html>
